@@ -1,0 +1,206 @@
+s={1,2,3,4,5,1,2,3,4,5}
+print(s)
+
+s='1,2,3'
+n=int(s)
+n=list(s)
+print(n)
+
+arr=[1,2,3,1,2,3,1,2,3]
+print(set(arr))
+
+abc={
+    "key":"value",
+    "key2":"value2",
+    "key3":"value3",
+};
+print(abc)
+
+student={
+    "name":"Student1",
+    "age":"15",
+    "year":"2",
+    "section":"EEE"
+};
+print(student)
+
+data={
+    "event1":"inventrix",
+    "event2":"electruzzle",
+    "event3":"electrosaga",
+};
+print(data)
+
+student={}
+
+student.update(
+    {"name":"name1","age":"20"}
+)
+print(student)
+
+student={}
+
+student.update(
+    {0:"student name",1:20,2:"address"}
+)
+print(student)
+
+student={
+    "name":"student 1",
+    "age":15,
+    "year":2,
+    "section":"eee"
+}
+print(student['name'])
+print(student['age'])
+print(student['year'])
+
+student={
+    "name":"student 1",
+    "age":15,
+    "year":2,
+    "section":"eee",
+}
+student['age']=1000
+print(student.keys())
+print(student.values())
+print(student.items())
+
+username=int(input("enter a username:"))
+password=int(input("enter a password:"))
+student={
+    "username":"susmitha",
+    "password":"1234",
+}
+print(student)
+
+def fun_name():
+    print("sample function")
+    
+    
+fun_name()
+
+def fun_name(num1,num2):
+    print("ans:",num1*num2)
+    
+fun_name(10,20)
+
+def fun_name(num1,num2,op):
+    if op=="+":
+        print(num1+num2)
+    elif op=="-":
+        print(num1-num2)
+    elif op=="*":
+        print(num1*num2)
+fun_name(10,20,"*")
+
+def fun_name(arr):
+    i=sum=0
+    for i in range(len(arr)):
+        sum=sum+arr[i]
+    print(sum)
+arr=[1,2,3,4,5]
+fun_name(arr)
+
+def fun_name(arr):
+    sum=0
+    for i in range(len(arr)):
+        sum=sum+arr[i]
+    return sum
+arr=[1,2,3,4,5]
+ans=fun_name(arr)
+
+def hello(a,b,c=0):
+    print(a)
+    print(b)
+    print(c)
+hello(10,20,50)
+
+def hello(a=90,b=60,c=0):
+    print(a)
+    print(b)
+    print(c)
+hello()
+
+def hello(a,b,c):
+    print(a)
+    print(b)
+    print(c)
+hello(b=10,c=40,a=50)
+
+def hello(x,y,z):
+    print(x)
+    print(y)
+    print(z)
+hello(y=40,x=20,z=0)
+
+def hello(*variable):
+    print(variable)
+hello(10,20,30)
+hello(10,20)
+hello(100,200,8,9,56)
+
+def hello(*variable):
+    print(variable)
+hello(10,20,30)
+hello(60,80,894)
+hello(56,78,45,"sushh",[2,3,4])
+
+def hello(*variable):
+    print(variable)
+hello()
+
+def hello(*variable):
+    print(sum(variable))
+hello(10,20,30)
+hello(10,20)
+hello(54,89,"hello",[1,2,4])
+hello()
+
+class Student:
+    name = "susmitha"
+    age = 20
+    s_class="EEE-A"
+    year=3
+ob1=Student()
+print(ob1.name)
+print(ob1.age)
+print(ob1.year)
+
+name="susmitha"
+age=20
+id = "20a31a0202"
+print("hello {} ,your age is {} , your id {} ".format(name,age,id))
+
+name="susmitha"
+age=20
+Id= "abcd1002"
+print(f"hello{name},your age is {age},Id is {Id}")
+
+class student:
+    name="sushh"
+    rollno="20a31a0214"
+    
+    def print_details(self):
+        print(f"name: {self.name} and rollno: {self.rollno}")
+        
+ob1 = student()
+ob1.print_details()
+
+class Car:
+    model="lambargini"
+    colour="black"
+    speed="1000km"
+    def print_details(self):
+        print(f"model:{self.model} ,colour:{self.colour} , speed:{self.speed}")
+ob=Car()
+ob.print_details()
+
+class student:
+    def __init__(self,name,rollno):
+        self.s_name = name
+        self.s_rollno = rollno
+        print(name,rollno)
+    def print_details(self):
+        print(f"name: {self.name}, and roll: {self.rollno}")
+ob1=student("sush",2o2)

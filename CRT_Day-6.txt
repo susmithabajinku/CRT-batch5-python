@@ -1,0 +1,211 @@
+class A:
+    val=10
+    def say_hello(self):
+        print("in class a")
+class B:
+    val=100
+    def say_hello(self):
+        print("in class b")
+import sample 
+ob1=sample.A()
+ob2=sample.B()
+ob1.say_hello()
+ob2.say_hello()
+
+class Parent:
+    name="Parent class"
+    def method_1(self):
+        print("This is method of class A")
+class Child(Parent):
+    pass
+ob=Child()
+print(ob.name)
+ob.method_1()
+
+
+class Parent:
+    name="Lion"
+    def method_1(self):
+        print("Lion is parent of cub")
+class Child(Parent):
+    pass
+ob=Child()
+print(ob.name)
+ob.method_1()
+
+
+class A:
+    var1="in class A"
+class B(A):
+    var2="in class B"
+class C(B):
+    var3="in class C"
+class D(C):
+    var4="in class D"
+
+
+class tree:
+    var1="grandmother in class tree"
+class branch(tree):
+    var2="mother in class branch"
+class leaf(branch):
+    var3="daughter in class leaf"
+ob=branch()
+print(ob.var2)
+
+
+class A:
+    var1="in class A"
+class B(A):
+    var2="in class B"
+class C(A):
+    var3="in class C"
+class D(A):
+    var4="in class D"
+class child(B):
+    pass
+ob=child()
+print(ob.var2)
+
+
+class A:
+    def m1(self):
+        print("in class A")
+class B:
+    def m1(self):
+        print("in class B")
+class C(A,B):
+    pass
+ob=C()
+ob.m1()
+
+
+class Lion:
+    def a1(self):
+        print("Lion is father")
+class Lioness:
+    def a1(self):
+        print("Lioness is mother")
+class cub(Lioness,Lion):
+    pass
+ob=cub()
+ob.a1()
+
+
+import random
+comp_score=0
+user_score=0
+arr=["rock","paper","scissors"]
+for i in range(5):
+    c_choice=random.randint(0,2)
+    c_choice=arr[c_choice]
+
+    u_choice=input("Enter choice:").lower()
+    if u_choice not in arr:
+        print("invalid choice")
+    if c_choice=="rock" and u_choice=="scissors":
+        print("comp won")
+        comp_score+=1
+    elif c_choice=="paper" and u_choice=="rock":
+        print("comp won")
+        comp_score+=1
+    elif c_choice=="scissor" and u_choice=="paper":
+        print("comp won")
+        comp_score+=1
+    elif c_choice==u_choice:
+        print("draw match")
+    else:
+        print("user won")
+        user_score+=1
+    print(f"comp:{comp_score},user:{user_score}")
+if comp_score>user_score:
+    print("computer won")
+elif user_score>comp_score:
+    print("user won")
+else:
+    print("draw match")
+
+
+import abc
+class Student(abc.ABC):
+    @abc.abstractmethod
+    def say_hello(self):
+        print("hello")
+        pass
+
+
+import abc
+class login(abc.ABC):
+    @abc.abstractmethod
+    def validate(self):
+        pass
+
+class Insta:
+    def welcome(self):
+        print("welcome to instagram")
+ob=Insta()
+ob.welcome()
+
+
+import abc
+class Login(abc):
+    @abstractmethod
+    def validate(self):
+        pass
+class Insta(Login):
+    def welcome(self):
+        print("welcome to instagram")
+    def validate(self):
+        print("validate login")
+    def pec_Login(self):
+        pass
+
+
+class A:
+    def welcome(self):
+        print("in class A")
+class B:
+    def welcome(self):
+        print("in class b")
+class C:
+    def welcome(self):
+        print("in class C")
+
+
+class A:
+    def welcome(self):
+        print("in class A")
+class B(A):
+    def welcome(self):
+        print("in class B")
+class C(B):
+    pass
+
+
+class A:
+    def welcome(self,a):
+        print(a)
+    def welcome(self,a,b):
+        print(a,b)
+ob=A()
+ob.welcome(10,20)
+
+
+class A:
+    def welcome(self,a,b):
+        print(a,b)
+    def welcome(self,a):
+        print(a)
+ob=A()
+ob.welcome(10)
+
+
+class A:
+    def welcome(self,a,b):
+        print(a,b)
+    def welcome(self,a):
+        print(a)
+    def welocome(self):
+        print("in class A")
+ob=A()
+ob.welcome()

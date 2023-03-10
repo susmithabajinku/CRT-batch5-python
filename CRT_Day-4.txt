@@ -1,0 +1,125 @@
+str1='ABCDEFG'
+str2='ate'
+for l in str1:
+    print((l+str2),end=" ")
+
+cubes=[]
+for i in range(11):
+    cubes.append(i**3)
+print(cubes)
+
+abc=[1,2,3,4,5,6,7,8,9,10]
+sum=0
+mean=0
+for i in range(11):
+    sum+=i 
+    mean=sum/10
+print(sum)
+print(mean)
+
+abc=[1,2,3,4,5,6,7,8,9,10]
+sum=0 
+for i in abc:
+    sum+=i
+print(sum)
+print(sum/len(abc))
+
+a=[90,0,8,7]
+print(max(a))
+print(min(a))
+print(sum(a))
+
+#list predefined functions
+ab=[0,-99,99,231,86]
+print(sorted(ab))
+
+ab.append(10)
+print(ab)
+
+print(ab.count(5))
+
+print(ab.count(99))
+
+ab.insert(3,100)
+print(ab)
+
+ab.remove(99)
+print(ab)
+
+
+#tower of hanoii
+def hanoii(n,a,b,c):
+    if n>0:
+        hanoii(n-1,a,c,b)
+        if a:
+            c.append(a.pop())
+        hanoii(n-1,b,a,c)
+a=[1,2,3,4]
+b=[]
+c=[]
+hanoii(len(a),a,b,c)
+print(a,b,c)
+
+str=[1,2,3,4]
+a=(len(str))
+print(a)
+
+f in ['a','e','i','o','u']
+
+3 not in[0,2,4,6]
+
+num=[1,2,3,4,5,6,7,8,9,10]
+print(sum(num))
+
+num.reverse()
+print(num)
+
+num=[10,-1,-9,2,8,5]
+num.reverse()
+print(num)
+
+num.sort()
+print(num)
+
+num=['1','a','abc','2','B','Def']
+num.sort()
+print(num)
+
+txt=['p','r','o','g','r','a','m']
+txt[2:5]=[]
+print(txt)
+
+cubes=[i**3 for i in range(11)]
+print(cubes)
+
+cubes=[i**3 for i in range(11)];print(cubes)
+
+num=[1,2,3,4]
+it=iter(num)
+for i in range(len(num)):
+    print("element at index",i,"is:",next(it))
+
+n=int(input("enter the weight :"))
+if n==0:
+    print("time estimated: 0 minutes")
+elif n in range(1,2001):
+    print("time estimated: 25 minutes")
+elif n in range(2001,4001):
+    print("time estimated: 35 minutes")
+elif n in range(4001,7001):
+    print("time estimated: 45 minutes")
+else:
+    print("overloaded")
+
+
+val=int(input("enter the number:"))
+x=0
+y=0
+for i in range(1,val+1):
+    if(i%2!=0):
+        x=x+7
+        print("the {} term is : {}".format(val,x-7))
+    else:
+        y=y+6
+        print("the {} term is : {}".format(val,y-6))
+
